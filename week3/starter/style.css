@@ -1,0 +1,69 @@
+/* Sock Drawer Styles from week 2! */
+
+/* * is the universal selector: it matches every element on the page.
+   This one is not visual. Add it first so width math stays simple. */
+* {
+  box-sizing: border-box; /* width/height include padding and border, not just the content */
+}
+
+/* body is an element selector: it styles the whole page. */
+body {
+  background-color: #f4efe6; /* beige strip appears behind the content */
+  min-height: 100vh; /* that beige now fills the whole window (100% of the viewport height) */
+  color: #2b2118; /* default text color for the page */
+  font-family: Arial, sans-serif; /* typeface; sans-serif is the fallback if Arial is missing */
+  font-size: 18px; /* size of the text, in pixels */
+  margin: 0; /* space outside the box; 0 makes the beige go edge to edge */
+  display: flex; /* turn the page into a flex container so we can move its children */
+  flex-direction: column; /* stack children top to bottom (title, then drawer, then button) */
+  align-items: center; /* children jump to the horizontal center */
+  justify-content: center; /* children jump to the vertical center */
+}
+
+h1 {
+  margin-bottom: 16px; /* extra space under the title, between it and the drawer */
+}
+
+/* .drawer is a class selector: it styles the box that holds the socks. */
+.drawer {
+  background-color: #c4a574; /* wood-colored box appears around the socks */
+  border: 4px solid #2b2118; /* cardboard edge: thickness, style, and color */
+  padding: 24px; /* space inside the drawer; the socks pull away from the border */
+  display: flex; /* socks jump from a stack into a row */
+  gap: 16px; /* space opens up between the socks */
+  justify-content: center; /* socks sit in the middle of the row */
+  align-items: center; /* socks line up vertically in the middle of the row */
+  flex-wrap: wrap; /* shrink the window: extras drop to the next line */
+}
+
+/* .sock is a class selector: every sock shares these styles. */
+.sock {
+  background-color: #7eb8da; /* all three socks turn into blue boxes */
+  border: 3px solid #2b2118; /* outline around each sock */
+  padding: 24px 16px; /* space inside the sock; the boxes grow (24px top/bottom, 16px left/right) */
+  width: 140px; /* every sock becomes the same width */
+  margin: 8px; /* space outside the sock, between it and its neighbors */
+  text-align: center; /* the label jumps to the middle of the sock */
+  font-weight: bold; /* sock names get thicker / stronger */
+}
+
+/* #favorite is an id selector: it styles only the one sock with id="favorite". */
+#favorite {
+  background-color: #e07a5f; /* that one sock turns orange */
+}
+
+/* .claim is the button's class. */
+.claim {
+  background-color: #f2cc8f; /* the button gets a yellow fill */
+  border: 3px solid #2b2118; /* outline around the button */
+  padding: 12px 24px; /* space inside the button; it gets chunky around "Mine!" */
+  font-size: 18px; /* size of the button text */
+  margin-top: 20px; /* the button drops away from the drawer */
+}
+
+/* :hover is a pseudo-class: these styles apply only while the mouse is on the button. */
+.claim:hover {
+  background-color: #2b2118; /* fill goes dark as soon as you hover */
+  color: #f4efe6; /* text goes light so it still reads on the dark fill */
+}
+
