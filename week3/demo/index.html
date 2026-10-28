@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- Sock Drawer HTML Code From Week 2 -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sock Drawer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1 id="title">Sock Drawer</h1>
+
+    <input type="text" id="name" placeholder="Your name">
+    <button onclick="printName()">Set name</button>
+
+    <h2 id="sock-count">You currently have 8 socks!</h2>
+
+    <div class="drawer">
+      <div class="sock" onclick="returnSock()">Left</div>
+      <div class="sock" id="favorite" onclick="returnAllSocks()">Red</div>
+      <div class="sock" onclick="returnSock()">Right</div>
+    </div>
+
+    <p id ="message"></p>
+
+    <button class="claim" onclick="takeSock()">Mine!</button>
+  </body>
+</html>
