@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Collection</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- React + a tool (Babel) that lets the browser understand JSX -->
+    <script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.26.10/babel.min.js"></script>
+  </head>
+  <body>
+    <!-- React puts everything inside this div -->
+    <div id="root"></div>
+
+    <script src="cards.js"></script>
+
+    <!-- Our React code. Order matters: a file can only use components loaded ABOVE it. -->
+    <script type="text/babel" src="components/Card.jsx"></script>
+    <script type="text/babel" src="components/CardList.jsx"></script>
+    <script type="text/babel" src="components/App.jsx"></script>
+    <script type="text/babel" src="index.jsx"></script>
+  </body>
+</html>
