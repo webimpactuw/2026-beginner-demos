@@ -1,6 +1,7 @@
 .env
 .DS_Store
-
-# finished week 4 demo (instructor only)
-week4/demo/
 node_modules/
+.next/
+
+# finished demos (instructor only)
+week*/demo/
